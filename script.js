@@ -91,15 +91,15 @@
   /* ==========================================================
      Cấu hình
      ========================================================== */
-  const OFFLINE_AFTER_MS = 60;   // quá 30 giây không có dòng dữ liệu mới = offline
+  const OFFLINE_AFTER_MS = 60000;   // quá 30 giây không có dòng dữ liệu mới = offline
   const KEYS = ['temp', 'hum', 'soil', 'light', 'co2'];
   const COL = { temp: 'temperature', hum: 'humidity', soil: 'soil_moisture', light: 'light_lux', co2: 'co2_ppm' };
   // Cảnh báo khi giá trị LỚN HƠN ngưỡng. Độ ẩm đất chưa có ngưỡng (đang là số thô, chưa hiệu chỉnh).
   const THRESHOLDS = {
-    temp:  { max: 50,   unit: '°C',  label: 'Nhiệt độ' },
-    hum:   { max: 50,   unit: '%',   label: 'Độ ẩm không khí' },
-    light: { max: 2000, unit: 'lux', label: 'Ánh sáng' },
-    co2:   { max: 800,  unit: 'ppm', label: 'CO₂' },
+    temp:  { max: 35,   unit: '°C',  label: 'Nhiệt độ' },
+    hum:   { max: 80,   unit: '%',   label: 'Độ ẩm không khí' },
+    light: { max: 10000, unit: 'lux', label: 'Ánh sáng' },
+    co2:   { max: 1000,  unit: 'ppm', label: 'CO₂' },
   };
 
   const state = {
